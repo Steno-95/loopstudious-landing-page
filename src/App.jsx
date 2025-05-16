@@ -1,7 +1,7 @@
 import CreationSection from "./components/CreationSection/CreationSection";
 import InteractiveSection from "./components/InteractiveSection/InteractiveSection";
 import Header from "./ui/Header";
-import SiteFooter from "./ui/SiteFooter";
+import SiteFooter from "./components/SiteFooter/SiteFooter";
 
 function App() {
   return (
