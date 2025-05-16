@@ -12,8 +12,8 @@ const content = [
 ];
 function CreationSection() {
   return (
-    <section className="p-8 grid grid-cols-1 justify-items-center gap-10">
-      <h2 className="row-start-1 uppercase text-[2.5rem]">Our creations</h2>
+    <section className="py-8 px-5 grid grid-cols-1 justify-items-center gap-10">
+      <h2 className="row-start-1 uppercase text-[2rem]">Our creations</h2>
       <button className="order-2 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest">
         See all
       </button>
