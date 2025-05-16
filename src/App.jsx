@@ -10,10 +10,10 @@ function App() {
         <InteractiveSection />
         <CreationSection />
       </main>
-      <footer className="bg-(--black) text-(--white)">
+      <footer className="bg-(--black) text-(--white) grid grid-cols-1 items-center justify-items-center gap-5 py-15">
         <img src="/images/logo.svg" />
-        <nav>
-          <ul>
+        <nav className="py-4">
+          <ul className="flex flex-col gap-5">
             <li>About</li>
             <li>Careers</li>
             <li>Events</li>
@@ -21,7 +21,7 @@ function App() {
             <li>Support</li>
           </ul>
         </nav>
-        <ul>
+        <ul className="flex gap-5">
           <li>
             <img src="/images/icon-facebook.svg" />
           </li>
@@ -35,7 +35,9 @@ function App() {
             <img src="/images/icon-instagram.svg" />
           </li>
         </ul>
-        <p>© 2021 Loopstudios. All rights reserved.</p>
+        <p className="text-(--grey)">
+          © 2021 Loopstudios. All rights reserved.
+        </p>
       </footer>
     </div>
   );

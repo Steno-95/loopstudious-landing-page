@@ -12,7 +12,7 @@ function Card({ title, imgSrc }) {
         />
       </picture>
       <div className="col-start-1 col-end-3 row-start-1 bg-gradient-to-r from-(--black)/50 to-transparent"></div>
-      <h2 className="text-(--white) text-[2.2rem] uppercase font-light col-start-1 col-end-1 row-start-1 place-content-end pl-5 pb-3 h-full">
+      <h2 className="text-(--white) text-[1.6rem] uppercase font-light col-start-1 col-end-1 row-start-1 place-content-end pl-5 pb-3 h-full">
         {title}
       </h2>
     </article>
