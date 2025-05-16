@@ -10,7 +10,8 @@ function App() {
         <InteractiveSection />
         <CreationSection />
       </main>
-      <footer>
+      <footer className="bg-(--black) text-(--white)">
+        <img src="/images/logo.svg" />
         <nav>
           <ul>
             <li>About</li>
@@ -20,6 +21,20 @@ function App() {
             <li>Support</li>
           </ul>
         </nav>
+        <ul>
+          <li>
+            <img src="/images/icon-facebook.svg" />
+          </li>
+          <li>
+            <img src="/images/icon-twitter.svg" />
+          </li>
+          <li>
+            <img src="/images/icon-pinterest.svg" />
+          </li>
+          <li>
+            <img src="/images/icon-instagram.svg" />
+          </li>
+        </ul>
         <p>© 2021 Loopstudios. All rights reserved.</p>
       </footer>
     </div>
