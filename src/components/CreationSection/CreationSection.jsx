@@ -1,4 +1,4 @@
-import Card from "../../ui/Card";
+import Card from "../Card/Card";
 
 const content = [
   { title: "Deep Earth", img: "deep-earth" },
@@ -10,12 +10,13 @@ const content = [
   { title: "The curiosity", img: "curiosity" },
   { title: "Make it fisheye", img: "fisheye" },
 ];
+
 function CreationSection() {
   return (
-    <section className="gallery-section">
+    <section className="gallery-section site-padding ">
       <h2 className="gallery-title">Our creations</h2>
       <button className="gallery-button">See all</button>
-      <div className="gallery">
+      <div className="gallery ">
         {content.map((item) => (
           <Card title={item.title} imgSrc={item.img} key={item.img} />
         ))}

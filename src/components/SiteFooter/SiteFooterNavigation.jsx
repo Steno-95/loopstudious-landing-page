@@ -2,11 +2,21 @@ function SiteFooterNavigation() {
   return (
     <nav className="py-4 md:order-1 md:justify-self-start">
       <ul className="links">
-        <li>About</li>
-        <li>Careers</li>
-        <li>Events</li>
-        <li>Products</li>
-        <li>Support</li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Careers</a>
+        </li>
+        <li>
+          <a href="">Events</a>
+        </li>
+        <li>
+          <a href="">Products</a>
+        </li>
+        <li>
+          <a href="">Support</a>
+        </li>
       </ul>
     </nav>
   );
