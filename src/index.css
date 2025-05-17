@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  /* ### Primary */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --grey: hsl(0, 0%, 46%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  html {
+    font-size: clamp(0.8em, 0.4em + 1.2vw, 1.4em);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  body {
+    font-family: "Alata", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+  }
+
+  li:hover {
+    @apply cursor-pointer relative;
+  }
+  li:hover::after,
+  li:focus-within::after {
+    width: 50%;
+    height: 5px;
+    opacity: 1;
+  }
+  li {
+    position: relative;
+  }
+
+  li::after {
+    content: "";
+    position: absolute;
+    background-color: var(--white);
+    width: 5px;
+    height: 3px;
+    left: 50%;
+    bottom: -40%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    @apply rounded-md;
+  }
+}
+
+@layer components {
+  .footer {
+    @apply bg-(--black) text-(--white) grid grid-cols-1 items-center justify-items-center gap-5 py-15 w-full;
+  }
+
+  .footer-tablet {
+    @apply md:grid-cols-2;
+  }
+
+  .links {
+    @apply flex flex-col gap-5 md:flex-row;
+  }
+
+  .gallery {
+    @apply grid grid-cols-1 gap-8 md:grid-cols-3 md:col-span-2 lg:grid-cols-4;
+  }
+  .card {
+    @apply grid grid-cols-2 cursor-pointer;
+  }
+  .card:hover .card-filter {
+    @apply bg-(--white)/75;
+  }
+  .card:hover .card-tag {
+    @apply text-(--black);
+  }
+  .card-filter {
+    @apply col-start-1 col-end-3 row-start-1 bg-gradient-to-r from-(--black)/50 to-transparent md:bg-gradient-to-t;
+  }
+  .card-tag {
+    @apply text-(--white) text-[1.6rem] uppercase font-light col-start-1 col-end-1 row-start-1 place-content-end pl-5 pb-3 h-full;
+  }
+  .card-picture {
+    @apply col-start-1 col-end-3 row-start-1 bg-gradient-to-r from-gray-950/70 to-transparent;
+  }
+  .gallery-section {
+    @apply grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 items-center py-[8rem];
+  }
+  .gallery-title {
+    @apply row-start-1 uppercase text-[2rem] md:justify-self-start pt-3 md:text-[2.2rem];
+  }
+  .gallery-button {
+    @apply order-2 md:order-0 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest md:justify-self-end md:text-[1rem] hover:bg-(--black) hover:text-(--white) cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .site-padding {
+    @apply px-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40;
+  }
+}
