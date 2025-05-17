@@ -12,12 +12,10 @@ const content = [
 ];
 function CreationSection() {
   return (
-    <section className="py-8 px-5 grid grid-cols-1 justify-items-center gap-10">
-      <h2 className="row-start-1 uppercase text-[2rem]">Our creations</h2>
-      <button className="order-2 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest">
-        See all
-      </button>
-      <div className="gallery grid grid-cols-1 gap-8">
+    <section className="gallery-section">
+      <h2 className="gallery-title">Our creations</h2>
+      <button className="gallery-button">See all</button>
+      <div className="gallery">
         {content.map((item) => (
           <Card title={item.title} imgSrc={item.img} key={item.img} />
         ))}
