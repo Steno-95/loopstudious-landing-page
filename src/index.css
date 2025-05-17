@@ -65,17 +65,27 @@
 }
 
 @layer components {
-  .footer {
-    @apply bg-(--black) text-(--white) grid grid-cols-1 items-center justify-items-center gap-5 py-15 w-full;
+  /* HEADER AND HERO SECTION */
+
+  /* INTERACTIVE SECTION */
+  .interactive-section {
+    @apply grid grid-cols-1 min-h-[80vh] px-5 items-center justify-around md:grid-cols-7 md:grid-rows-[5rem_1fr_1fr] md:pt-20 md:min-h-[60vh] md:items-end  xl:max-w-[80rem] mx-auto;
+  }
+  .interactive-picture {
+    @apply md:col-[1_/_6] md:row-[1_/_4];
+  }
+  .interactive-textbox {
+    @apply flex flex-col min-h-fit text-center gap-8 md:col-[5/_8] md:row-[2_/_4] md:bg-(--white) md:pl-9 md:pt-10 md:pb-2 md:gap-3 md:text-start xl:pt-8 xl:pl-8 xl:max-w-[21rem] md:justify-self-end xl:col-[4/9];
+  }
+  .textbox-title {
+    @apply text-[2.2rem] uppercase tracking-tight md:text-[1.9rem] lg:text-[2.2rem];
+    line-height: 1;
+  }
+  .textbox-text {
+    @apply text-[1.1rem] text-(--grey) md:text-[.7rem] xl:text-[.7rem];
   }
 
-  .footer-tablet {
-    @apply md:grid-cols-2;
-  }
-
-  .links {
-    @apply flex flex-col gap-5 md:flex-row;
-  }
+  /* CREATION SECTION */
 
   .gallery {
     @apply grid grid-cols-1 gap-8 md:grid-cols-3 md:col-span-2 lg:grid-cols-4;
@@ -99,7 +109,7 @@
     @apply col-start-1 col-end-3 row-start-1 bg-gradient-to-r from-gray-950/70 to-transparent;
   }
   .gallery-section {
-    @apply grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 items-center py-[8rem];
+    @apply grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 items-center py-[8rem] max-w-[80rem] mx-auto;
   }
   .gallery-title {
     @apply row-start-1 uppercase text-[2rem] md:justify-self-start pt-3 md:text-[2.2rem];
@@ -107,10 +117,23 @@
   .gallery-button {
     @apply order-2 md:order-0 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest md:justify-self-end md:text-[1rem] hover:bg-(--black) hover:text-(--white) cursor-pointer focus:bg-(--black) focus:text-(--white);
   }
+
+  /* FOOTER SITE SECTION */
+  .footer {
+    @apply bg-(--black) text-(--white) grid grid-cols-1 items-center justify-items-center gap-5 py-15 w-full;
+  }
+
+  .footer-tablet {
+    @apply md:grid-cols-2;
+  }
+
+  .links {
+    @apply flex flex-col gap-5 md:flex-row;
+  }
 }
 
 @layer utilities {
   .site-padding {
-    @apply px-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40;
+    @apply px-5 md:px-10 lg:px-20 xl:px-25 2xl:px-40;
   }
 }

@@ -3,7 +3,7 @@ import InteractiveTextBox from "./InteractiveTextBox";
 
 function InteractiveSection() {
   return (
-    <section className="flex flex-col min-h-screen px-5 items-center justify-around ">
+    <section className="interactive-section site-padding">
       <InteractivePicture />
       <InteractiveTextBox />
     </section>
