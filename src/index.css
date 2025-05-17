@@ -34,6 +34,11 @@
   li:hover {
     @apply cursor-pointer relative;
   }
+
+  a:focus {
+    @apply border-none outline-none;
+  }
+
   li:hover::after,
   li:focus-within::after {
     width: 50%;
@@ -100,7 +105,7 @@
     @apply row-start-1 uppercase text-[2rem] md:justify-self-start pt-3 md:text-[2.2rem];
   }
   .gallery-button {
-    @apply order-2 md:order-0 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest md:justify-self-end md:text-[1rem] hover:bg-(--black) hover:text-(--white) cursor-pointer;
+    @apply order-2 md:order-0 uppercase text-[1.5rem] border-2 w-fit py-3 px-15 tracking-widest md:justify-self-end md:text-[1rem] hover:bg-(--black) hover:text-(--white) cursor-pointer focus:bg-(--black) focus:text-(--white);
   }
 }
 
