@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Header />
-      <main className="">
+      <main className="flex flex-col">
         <InteractiveSection />
         <CreationSection />
       </main>
