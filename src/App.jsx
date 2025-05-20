@@ -5,9 +5,9 @@ import SiteFooter from "./components/SiteFooter/SiteFooter";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col gap-20">
       <Header />
-      <main className="flex flex-col">
+      <main className="flex flex-col gap-20">
         <InteractiveSection />
         <CreationSection />
       </main>
