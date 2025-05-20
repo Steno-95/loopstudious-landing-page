@@ -1,28 +1,36 @@
+import { useEffect, useState } from "react";
+import Navigation from "./Navigation";
+import Logo from "./Logo";
+import MobileNav from "./MobileNav";
+
+const content = ["about", "careers", "events", "products", "support"];
+
 function Header() {
+  const [isShowing, setIsShowing] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mediaWatcher = window.matchMedia(`(max-width: 768px)`);
+    setIsMobile(mediaWatcher.matches);
+
+    function updateIsMobile(e) {
+      setIsMobile(e.matches);
+    }
+    mediaWatcher.addEventListener("change", updateIsMobile);
+    return () => mediaWatcher.removeEventListener("change", updateIsMobile);
+  }, []);
+
   return (
-    <header className="bg-[url(/images/mobile/image-hero.jpg)] lg:bg-[url(/images/desktop/image-hero.jpg)] min-h-screen px-5 bg-top py-8 flex flex-col bg-no-repeat bg-cover">
-      <nav className="flex justify-between">
-        <figure>
-          <img src="/images/logo.svg" />
-        </figure>
-        {window.innerWidth >= 768 && (
-          <ul className="flex text-(--white) gap-3">
-            <li>About</li>
-            <li>Careers</li>
-            <li>Events</li>
-            <li>Products</li>
-            <li>Support</li>
-          </ul>
-        )}
-        {window.innerWidth < 768 && (
-          <img src="/images/icon-hamburger.svg" className="size-7" />
-        )}
-      </nav>
-      <div className="min-h-svh place-content-center">
-        <h1 className="text-(--white) uppercase text-[2.5rem] p-8 border-2">
-          Immersive experiences that deliver
-        </h1>
+    <header className="header header-medias relative">
+      <Navigation
+        isShowing={isShowing}
+        onClick={setIsShowing}
+        content={content}
+        screenSize={isMobile}
+      />
+      <div className="hero-box">
+        <h1 className="hero-text">Immersive experiences that deliver</h1>
       </div>
+      {isShowing && isMobile && <MobileNav setIsShowing={setIsShowing} />}
     </header>
   );
 }
