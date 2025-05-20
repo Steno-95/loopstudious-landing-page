@@ -15,7 +15,9 @@ function CreationSection() {
   return (
     <section className="gallery-section site-padding ">
       <h2 className="gallery-title">Our creations</h2>
-      <button className="gallery-button">See all</button>
+      <button className="gallery-button" type="button">
+        See all
+      </button>
       <div className="gallery ">
         {content.map((item) => (
           <Card title={item.title} imgSrc={item.img} key={item.img} />
