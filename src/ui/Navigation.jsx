@@ -6,8 +6,8 @@ function Navigation({ isShowing, onClick, content, screenSize }) {
       <figure className="lg:w-full">
         <img src="/images/logo.svg" />
       </figure>
-      {screenSize >= 768 && <NavigationList content={content} />}
-      {screenSize < 768 && (
+      {!screenSize && <NavigationList content={content} />}
+      {screenSize && (
         <button className="nav-btn" onClick={() => onClick((show) => !show)}>
           {!isShowing && (
             <svg className="size-6" xmlns="http://www.w3.org/2000/svg">
