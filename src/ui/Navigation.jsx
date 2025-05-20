@@ -4,7 +4,7 @@ function Navigation({ isShowing, onClick, content, screenSize }) {
   return (
     <nav className="navigation">
       <figure className="lg:w-full">
-        <img src="/images/logo.svg" />
+        <img src="/images/logo.svg" alt="Loopstudios logo" />
       </figure>
       {!screenSize && <NavigationList content={content} />}
       {screenSize && (

@@ -103,7 +103,7 @@
   }
 
   .header-medias {
-    @apply lg:bg-[url(/images/desktop/image-hero.jpg)] lg:grid lg:grid-cols-[1fr_min-content] lg:px-10 xl:px-20 xl:py-20 xl:max-h-screen xl:gap-15;
+    @apply lg:bg-[url(/images/desktop/image-hero.jpg)] lg:grid lg:grid-cols-[1fr_min-content] lg:px-10 xl:px-20 xl:py-20 xl:max-h-screen xl:gap-15 md:bg-contain;
   }
 
   .navigation {
