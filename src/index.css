@@ -39,28 +39,33 @@
     @apply border-none outline-none;
   }
 
-  .navigation li:hover::after,
-  .navigation li:focus-within::after {
-    width: 50%;
-    height: 5px;
-    opacity: 1;
-  }
-  .navigation li {
-    position: relative;
-  }
+  .navigation,
+  .links,
+  .social-logos {
+    & li:hover::after,
+    & li:focus-within::after {
+      width: 50%;
+      height: 5px;
+      opacity: 1;
+    }
+    & li {
+      position: relative;
+      width: fit-content;
+    }
 
-  .navigation li::after {
-    content: "";
-    position: absolute;
-    background-color: var(--white);
-    width: 5px;
-    height: 3px;
-    left: 50%;
-    bottom: -40%;
-    transform: translateX(-50%);
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-    @apply rounded-md;
+    & li::after {
+      content: "";
+      position: absolute;
+      background-color: var(--white);
+      width: 5px;
+      height: 3px;
+      left: 50%;
+      bottom: -40%;
+      transform: translateX(-50%);
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+      @apply rounded-md;
+    }
   }
 
   .mobile-nav {
@@ -111,6 +116,10 @@
 
   .mobile-nav {
     @apply flex flex-col gap-10 text-[2.2rem] uppercase;
+  }
+
+  .mobile-links {
+    @apply fixed top-1/2 left-1/2 w-screen h-screen bg-black -translate-[50%] grid grid-rows-[min-content_1fr] items-center p-10 text-white;
   }
 
   .hero-box {
@@ -182,6 +191,10 @@
 
   .links {
     @apply flex flex-col gap-5 md:flex-row;
+  }
+
+  .social-logos {
+    @apply flex gap-5 md:justify-self-end;
   }
 }
 

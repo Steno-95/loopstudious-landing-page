@@ -2,7 +2,7 @@ import Logo from "./Logo";
 
 function MobileNav({ setIsShowing }) {
   return (
-    <div className="fixed top-1/2 left-1/2 w-screen h-screen bg-black/90 -translate-[50%] grid grid-rows-[min-content_1fr] items-center p-10 text-white just">
+    <div className="mobile-links">
       <div className="flex justify-between items-center">
         <Logo />
         <button
