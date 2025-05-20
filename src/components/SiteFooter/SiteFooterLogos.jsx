@@ -2,7 +2,7 @@ const content = ["facebook", "twitter", "pinterest", "instagram"];
 
 function SiteFooterLogos() {
   return (
-    <ul className="flex gap-5 md:justify-self-end">
+    <ul className="social-logos">
       {content.map((item) => (
         <li key={item} className="mb-2">
           <a href="" aria-labelledby="img">
