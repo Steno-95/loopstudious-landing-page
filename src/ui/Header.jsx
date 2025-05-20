@@ -30,7 +30,7 @@ function Header() {
       <div className="hero-box">
         <h1 className="hero-text">Immersive experiences that deliver</h1>
       </div>
-      {isShowing && <MobileNav setIsShowing={setIsShowing} />}
+      {isShowing && isMobile && <MobileNav setIsShowing={setIsShowing} />}
     </header>
   );
 }
