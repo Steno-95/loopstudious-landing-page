@@ -66,6 +66,26 @@
 
 @layer components {
   /* HEADER AND HERO SECTION */
+  .header {
+    @apply bg-[url(/images/mobile/image-hero.jpg)]  min-h-screen px-5 bg-top py-8 flex flex-col bg-no-repeat bg-cover;
+  }
+
+  .header-medias {
+    @apply lg:bg-[url(/images/desktop/image-hero.jpg)] lg:grid lg:grid-cols-[1fr_min-content] lg:px-10 xl:px-20 xl:py-20 xl:max-h-screen xl:gap-15;
+  }
+
+  .navigation {
+    @apply flex justify-between items-center col-[1/-1];
+  }
+  .nav-btn {
+    @apply size-12 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/10;
+  }
+  .hero-box {
+    @apply min-h-svh w-full grid grid-cols-1 grid-rows-3 items-center justify-items-center md:justify-items-start lg:grid-rows-1 xl:items-start;
+  }
+  .hero-text {
+    @apply text-(--white) uppercase text-[3rem] border-2 leading-[3rem] tracking-tight p-[3%] max-w-[22rem] md:max-w-[28rem] md:text-[3.5rem] md:leading-[3.8rem] h-fit row-[2/3] lg:row-[1/2] lg:max-w-[30rem];
+  }
 
   /* INTERACTIVE SECTION */
   .interactive-section {
