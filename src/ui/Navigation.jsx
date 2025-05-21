@@ -1,14 +1,18 @@
+import Logo from "./Logo";
 import NavigationList from "./NavigationList";
 
 function Navigation({ isShowing, onClick, content, screenSize }) {
   return (
-    <nav className="navigation">
-      <figure className="lg:w-full">
-        <img src="/images/logo.svg" alt="Loopstudios logo" />
-      </figure>
+    <nav className="navigation" aria-label="navigation">
+      <Logo />
       {!screenSize && <NavigationList content={content} />}
       {screenSize && (
-        <button className="nav-btn" onClick={() => onClick((show) => !show)}>
+        <button
+          type="button"
+          aria-label="hamburger menu"
+          className="nav-btn"
+          onClick={() => onClick((show) => !show)}
+        >
           {!isShowing && (
             <svg className="size-6" xmlns="http://www.w3.org/2000/svg">
               <g fill="#FFF" fillRule="evenodd">

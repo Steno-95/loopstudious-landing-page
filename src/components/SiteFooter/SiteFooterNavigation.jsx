@@ -1,6 +1,9 @@
 function SiteFooterNavigation() {
   return (
-    <div className="py-4 md:order-1 md:justify-self-start">
+    <nav
+      aria-label="footer navigation"
+      className="py-4 md:order-1 md:justify-self-start"
+    >
       <ul className="links">
         <li>
           <a href="">About</a>
@@ -18,7 +21,7 @@ function SiteFooterNavigation() {
           <a href="">Support</a>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 

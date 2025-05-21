@@ -1,23 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navigation from "./Navigation";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
+import useMobile from "../hooks/useMobile";
 
 const content = ["about", "careers", "events", "products", "support"];
 
 function Header() {
   const [isShowing, setIsShowing] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const mediaWatcher = window.matchMedia(`(max-width: 768px)`);
-    setIsMobile(mediaWatcher.matches);
-
-    function updateIsMobile(e) {
-      setIsMobile(e.matches);
-    }
-    mediaWatcher.addEventListener("change", updateIsMobile);
-    return () => mediaWatcher.removeEventListener("change", updateIsMobile);
-  }, []);
+  const isMobile = useMobile();
 
   return (
     <header className="header header-medias relative">

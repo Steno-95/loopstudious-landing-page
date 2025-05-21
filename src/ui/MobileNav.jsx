@@ -2,10 +2,12 @@ import Logo from "./Logo";
 
 function MobileNav({ setIsShowing }) {
   return (
-    <div className="mobile-links">
+    <nav aria-label="mobile menu navigation" className="mobile-links">
       <div className="flex justify-between items-center">
         <Logo />
         <button
+          type="button"
+          aria-label="cross icon on a button to close  the menu"
           className="nav-btn"
           onClick={() => setIsShowing((show) => !show)}
         >
@@ -20,14 +22,22 @@ function MobileNav({ setIsShowing }) {
       </div>
       <ul className="mobile-nav">
         <li>
-          <a>About</a>
+          <a>about</a>
         </li>
-        <li>careers</li>
-        <li>events</li>
-        <li>products</li>
-        <li>support</li>
+        <li>
+          <a>careers</a>
+        </li>
+        <li>
+          <a>events</a>
+        </li>
+        <li>
+          <a>products</a>
+        </li>
+        <li>
+          <a>support</a>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
