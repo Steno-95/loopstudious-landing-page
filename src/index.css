@@ -143,12 +143,12 @@
   }
 
   .textbox-title {
-    @apply text-[2.2rem] uppercase tracking-tight md:text-[1.9rem] lg:text-[2.2rem];
+    @apply text-[2.2rem] uppercase tracking-tight;
     line-height: 1;
   }
 
   .textbox-text {
-    @apply text-[1.1rem] text-(--grey) md:text-[.7rem] xl:text-[.7rem];
+    @apply text-[1.1rem] text-(--grey) lg:text-[.9rem];
   }
 
   /* CREATION SECTION */
